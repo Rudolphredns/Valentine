@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Valentine</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff007f;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff5eae;
+            font-size: 26px;
+            margin-bottom: 20px;
+            
+            
+        }
+        
+        
+        #yesButton {
+            font-size: 20px;
+            background-color: #00cc66;
+            color: white;
+            
+        }
+        #noButton {
+            font-size: 20px;
+            background-color: #ff6666;
+            color: white;
+            
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day!</h1>
+        <h2>From dolph</h2>
+        <img src="valentine.gif" alt="Valentine's Day" width="300">
+        
+        <h2>Do you want to be my valentine?</h2>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+        <script>
+            // สร้างฟังก์ชันเมื่อคลิกปุ่ม "Yes"
+            document.getElementById("yesButton").addEventListener("click", function() {
+                window.location.href = "start_page.html";
+            });
+            
+            // สร้างฟังก์ชันเมื่อคลิกปุ่ม "No"
+            document.getElementById("noButton").addEventListener("click", function() {
+                // เพิ่มขนาดของปุ่ม "Yes" ด้วย JavaScript
+                var yesButton = document.getElementById("yesButton");
+                var currentSize = window.getComputedStyle(yesButton).fontSize;
+                var newSize = parseInt(currentSize) + 10; // เพิ่มขนาดเป็นตัวอักษร
+                yesButton.style.fontSize = newSize + "px";
+                
+            });
+        </script>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Valentine</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff007f;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff5eae;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #submitButton {
+            background-color: #ff007f;
+            color: white;
+            font-size: 20px;
+        }
+        #submitButton:hover {
+            background-color: #d6006d;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    
+    <div class="container">
+
+        <h1>What do you want to tell me this Valentine's Day?</h1>
+        <h2>Feel free to type and tell me what you want me to understand.</h2>
+        <img src="pokemon.gif" alt="pokemon" height="300" width="300">
+        <br><br>
+        
+        
+        <textarea id="valentineMessage" name="message" placeholder="Type your message here..."></textarea>
+        <br><br><br>
+        <button type="button" class="button" id="submitButton" onclick="saveMessage()">Submit</button>
+        
+        <script>
+            document.getElementById("submitButton").addEventListener("click", function() {
+                window.location.href = "questionpage.html";
+            });
+
+            function saveMessage() {
+                var message = document.getElementById("valentineMessage").value;
+                localStorage.setItem("valentineMessage", message);
+                window.location.href = "questionpage.html";
+            }
+        </script>
+
+    </div>
+
+    
+</body>
+</html>

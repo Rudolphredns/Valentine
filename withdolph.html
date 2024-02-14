@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Valentine</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image:"bg.jpg";
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff007f;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff5eae;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #submitButton {
+            background-color: #ff007f;
+            color: white;
+        }
+        #submitButton:hover {
+            background-color: #d6006d;
+        }
+        textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #yesButton {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d6004c; /* สีของปุ่มเมื่อนำเม้าส์ไปชี้ */
+        }
+        h3 {
+            color: #a30051;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-left: 0;
+            text-align: left ;
+        }
+
+        .cropped-image {
+            width: 200px; /* Width of the cropped image */
+            height: 100px; /* Height of the cropped image */
+            overflow: hidden; /* Hide any overflow */
+            border-radius: 10px; /* Rounded corners */
+            
+        }
+        .cropped-image img {
+            width: 400px; /* Width of the original image */
+            height: 100px; /* Maintain aspect ratio */
+            margin-left: -100px; /* Move the image to show only the desired portion */
+        }
+        .logo-container img {
+            max-width: 100px; /* กำหนดขนาดสูงสุดของรูปภาพ */
+            height: auto; /* ให้รูปภาพปรับขนาดตามอัตราส่วน */
+           
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+        }
+        .checkbox-container {
+            
+            flex-direction: column;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-bottom: 10px; /* กำหนดระยะห่างด้านล่างของ checkbox */
+        }
+        #noButton {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #f44336;
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h1>What you want Dolph to do with you in this valentine day?</h1>
+        
+        
+        <img src="couple.gif" alt="couple" height="450" width="450">
+        <br><br><br>
+        <p>Choose only two of box.</p>
+        <div class="logo-container">
+            <img src="valorant.png" alt="Logo 1">
+            <img src="lethal.png" alt="Logo 2">
+            <img src="nf.jpg" alt="Logo 3">
+            <img src="tiktok-icon2.png" alt="Logo 6">
+            <img src="grab.jpg" alt="Logo 4">
+            <img src="discord.png" alt="Logo 5">
+            
+        </div>
+        <form action="https://formspree.io/f/mqkrqpgy" method="POST">
+            <div class="checkbox-container">
+
+                <input type="hidden" name="message" id="valentineMessage">
+
+                
+                <input type="checkbox" id="option1" name="option1" value="play_valorant" >
+                <label for="option1">Valorant</label>
+
+                <input type="checkbox" id="option2" name="option2" value="lethal_company">
+                <label for="option2">lethal Company</label>
+
+                <input type="checkbox" id="option3" name="option3" value="watch_movie_together">
+                <label for="option3">Watch Movie Together</label>
+
+                <input type="checkbox" id="option4" name="option4" value="tiktok">
+                <label for="option4">TikTok</label>
+
+                <input type="checkbox" id="option5" name="option5" value="copy_paste_food">
+                <label for="option5">Copy-paste Food</label>
+
+                <input type="checkbox" id="option6" name="option6" value="talk_with_me">
+                <label for="option6">Talk with Me</label>
+                    <br><br><br>
+                
+                <button type="submit" id="submitButton" class="button">Submit</button>
+                
+             </div>   
+       </form>
+        
+
+    </div>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let checkedCount = 0;
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                if (checkedCount > 2) {
+                    checkbox.checked = false;
+                    alert('You can only select two options.');
+                }
+            });
+        });
+
+        document.getElementById('checkboxForm').addEventListener('submit', function(event) {
+            if (checkedCount !== 2) {
+                event.preventDefault();
+                alert('Please select exactly two options.');
+            }
+        });
+
+    </script>
+
+    <script>
+
+        document.getElementById('submitButton').addEventListener('click', function() {
+                    const savedMessage = localStorage.getItem("valentineMessage");
+                    document.getElementById('valentineMessage').value = savedMessage;
+        });
+
+        const savedMessage = localStorage.getItem("valentineMessage");
+        if (savedMessage) {
+            document.getElementById("messageDisplay").innerText = savedMessage;
+        }
+    </script>
+
+</body>
+</html>
